@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Bowlby+One+SC&family=Bungee&family=Cinzel&family=Dosis:wght@300&family=Luckiest+Guy&family=Neucha&family=Open+Sans+Condensed:wght@300&family=Russo+One&family=Sacramento&family=Ubuntu+Condensed&display=swap'); 
+
+
+
+
+/* CSS Styles
+Table of contents
+------------------
+1. global styles
+2. typography
+3. components
+ -------------------------------------------------------------------*/
+
+/* ----------------
+  1. global styles
+------------------ */
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+:root {
+  /* variable for pseudo "before" in progresstimer  */
+  --bg-before: 0;
+}
+
+body {
+    background-color: #403c3c;
+    background: linear-gradient(180deg, #5c5c5c 0%, #0f0f0f 100%);
+    max-height: 455vh;
+}
+
+/* ----------------
+  2. layout
+------------------ */
+
+/* header */
+header {
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+
+  }
+  
+h1 {
+line-height: 1.5;
+color: #fdfdfdad;
+}
+
+
+.intro {
+    position: relative;
+    font-size: 4rem;
+    margin-top: 50px;
+  }
+  
+  /* auto size backgrounds in h1 */
+  h1::before,
+  h1::after {
+    content: "";
+    height: 100%;
+    display: block;
+    position: absolute;
+  }
+  
+  /* background bar  */
+  h1::before {
+    background: #22222296;
+    /* set background before to width of website */
+    width: 145vh;
+    /* bring the red bar to middle of the page */
+    left: 50%;
+    /* move it 50% left to bring it to y = 0 */
+    transform: translateX(-50%);
+    z-index: -2;
+  }
+  
+h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-family:  'Bungee', cursive;
+    text-shadow: 0px 6px 6px black;
+
+}
+
+  /* -------------- end header text */
+
+
+/* dice */
+.dice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+#dice-img {
+    width: 165px;
+    margin: 30px;
+}
+
+
+
+/* dice result output */
+#result {
+    color: #fff;
+    font-family:  'Bungee', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+/* dice end */
+
+
+#go {
+    font-family: 'Neucha', cursive;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center;
+    color:#ffc83d;
+    text-shadow: 0px 6px 6px black;
+    margin-bottom: 55px;
+}
+
+/* -----------
+ 3. components
+------------- */
+
+.fa-caret-down{
+  color:white;
+  font-size: 2.4rem;
+}
+
+
+/* countdown time visual display */
+.board {
+  display:none;
+}
+
+.board-display{
+  width:200px;
+  background-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5,#12bcfe,#44ce7b);
+  text-align:center;
+  margin:0 auto;
+  color:#ffffff;
+  text-decoration: none;
+  display:block;
+  border-radius:6px;
+  overflow: hidden;
+  animation:show 1s ease-in 3;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.board-display span{
+  padding:10px 0;
+  font-size:22px;
+  display: block;
+  margin:3px;
+  background: #000000;
+  border-radius: 3px;
+}
+
+
+
+@keyframes show{
+  0%{
+    background-position: 0px;
+  }
+  20%{
+    background-position: -110px;
+  }
+  35%{
+    background-position: -180px;
+  }
+  50%{
+    background-position: -210px;
+  }
+  80%{
+    background-position: -350px;
+  }
+  100%{
+    background-position: -390px;
+  }
+}
+/* dice button end */
+
+
+/* ------------ clock start ------------*/
+.clock{
+    color:#ffffff;  
+    margin: 1.5rem 1.5rem 0rem 0rem;
+    font-size:2rem;
+    text-align: end;
+    font-family: 'Ubuntu Condensed', cursive;
+    font-size: 1rem;
+    font-family:  'Bungee', cursive;
+    text-shadow: 0px 6px 6px black;
+} 
+
+/* ------------ clock end ---------------*/
+
+/* ------------ input field start -------*/
+.select-wrapper select{
+    background: #403c3c;
+    color: cyan;
+    padding:10px;
+    max-width:250px;
+    height:50px;
+    border:none;
+    outline: none;
+    font-family:  'Bungee', cursive;
+    font-size: 20px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.5);
+}
+
+
+option
+{
+    color: #ffffff;
+}
+/* ------------ input field end -------*/
+
+
+
+
+/*--------------music-player/ progress-bar start------*/
+
+  section {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    text-align: center;
+  } 
+  section .player {
+    position: relative;
+    margin: 0 auto;
+    width: 176px;
+    height: 176px;
+    background: linear-gradient(0deg, #222, #111);
+    border-radius: 100%;
+    border: solid 2px #000;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 4px 2px rgba(0, 0, 0, 0.2);
+  }
+  section .player .fa {
+    font-size: 1.2rem;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  section .player .fa:hover {
+    color: cyan;
+    text-shadow: 0 0 4px cyan;
+  }
+  section .player .fa.fa-play, .fa.fa-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 88px;
+    height: 88px;
+    border: solid 2px #000;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 0 8px rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    line-height: 88px;
+    background: linear-gradient(0deg, #111, #222);
+  }
+  section .player .fa.fa-fast-backward {
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+  }
+  section .player .fa.fa-fast-forward {
+    top: 50%;
+    left: 82%;
+    transform: translateY(-50%);
+  }
+
+   section .title {
+    text-align: center;
+    padding-top: 1rem;
+    color: #fdfdfdad;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+  }
+  section .time-tracker {
+    border-top: solid 1px #000;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    padding-top: 0.5rem;
+    box-sizing: border-box;
+  }
+  section .time-tracker .timer {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 2rem;
+    cursor: pointer;
+  }
+  section .time-tracker .timer .bg {
+    position: relative;
+    top: 50%;
+    margin-right: 0.5rem;
+    transform: translateY(-50%);
+    height: 0.6rem;
+    border-top: solid 1px #000;
+    border-radius: 10px;
+    background: none;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: left;
+  }
+    section .time-tracker .timer .bg::before
+    {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 0.2rem;
+    border-radius: 10px;
+    width: var(--bg-before);
+    background: cyan;
+    box-shadow: 0 0 2px 2px cyan;
+  }
+    section .time{
+      text-align: left;
+    }
+
+  /* class defined for play button glow when active */
+
+  .glow {
+    color: cyan;
+    text-shadow: 0 0 4px cyan;
+  }
+
+/* ----------------- music-player/ progress-bar end ----------*/
+
+
+
+/* ------------------checkbox for countdown start------------ */
+input[type="checkbox"] {
+  margin-left:10px;
+  position:relative;
+  width:70px;
+  height:30px;
+  -webkit-appearance:   none;
+  background: linear-gradient(0deg, #333, #000);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+  cursor: pointer;
+}
+
+input:checked[type="checkbox"]:nth-of-type(1) {
+  background: linear-gradient(0deg, #e67e22, #f39c12);
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+}
+
+input[type="checkbox"]:before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:30px;
+  height:30px;
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(.98,.96);
+  transition:.5s;
+}
+
+input:checked[type="checkbox"]:before {
+  left:40px;
+}
+
+input[type="checkbox"]:after{
+  content:'';
+  position:absolute;
+  top:calc(50% - 2px);
+  left:70px;
+  width:4px;
+  height:4px;
+  background: linear-gradient(0deg, #6b6b6b, #000);
+  border-radius: 50%;
+  transition:.5s;
+}
+
+input:checked[type="checkbox"]:after {
+  left:110px;
+}
+
+.header-timer{
+  display:flex;
+  flex-direction: column;
+}
+
+.timer{
+  margin-bottom: 3px;
+}
+
+
+.countdown-timer{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+
+.des-timer-2{
+  margin-left: 8px;
+  margin-right: 13px;
+
+}
+
+/* ------------------checkbox for countdown end-------------- */
+
+.visualCtdwn{
+  color:cyan;
+}
+/*-------------------arrow pointer for countdown start-------- */
+
+
+.arrow{
+  visibility: hidden;
+  color:cyan;
+}
+.arrow p{
+  font-size:0.8rem;
+  
+}
+
+.fa-chevron-right {
+  animation: arrowAnim 3s infinite;
+  font-size: 25px;
+}
+
+ 
+
+@keyframes arrowAnim {
+  0% {
+      transform:translateX(0) translateX(-50%);
+  }
+
+  50% {
+    transform:translateX(30%) translateX(-20%);
+  }
+
+  100% {
+      transform: translateX(0) translateX(-50%);
+  }
+}
+
+/*-------------------arrow pointer countdown end--------------- */
+
+/* ------------------button 3d start--------------------------- */
+
+.btn-11{  
+      position:relative;
+      display:inline-block;
+      padding:10px 20px;
+      font-size:20px;
+      font-weight:bold;
+      text-decoration: none;
+      color:#fff;
+      text-shadow:0 1px 0 rgba(0,0,0,.3);
+      border:1px solid #444;    
+      border-bottom:1px solid #444;
+      margin-top: 20px;
+      box-shadow: inset 1px 1px 0 0 rgba(255,255,255,.6), inset 0 -1px 0 0 rgba(0,0,0.4);
+      border-radius:999px; 
+      cursor:pointer;
+      /* background: #fff; */
+      background: #333;
+      background: linear-gradient(to bottom, #d33672, #5f3847);
+  }
+
+  .btn-11:hover{
+      background-color:#f77dac;
+      background: linear-gradient(to bottom, #f77dac, #d33672);
+    
+  }
+
+  .btn-11:active{
+      background:#c30e54;
+      text-shadow:0 -1px 0 rgba(0,0,0,.8);
+      box-shadow:inset 0 1px 3px rgba(0,0,0 .8)
+  }
+
+   .btn-11:before{
+      content:'';
+      background: #333(36, 36, 36);
+      display: block;
+      position:absolute;
+      width:100%;
+      height:100%;
+      padding:8px;
+      left:-8px;
+      top:-9px;
+      box-shadow:inset 0 1px 20px rgb(104, 103, 103),0 1px 0 rgb(5, 5, 5);
+      border-radius:999px; 
+      z-index:-1;
+  } 
+
+  /* ------------------button 3d end----------------------------- */
+
+ 

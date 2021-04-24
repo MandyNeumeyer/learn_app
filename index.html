@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <!-- https://challenge-picker.netlify.app/# -->
+    <title>Challenge Picker</title>    
+</head>
+<body>
+    <div class="clock" id="clock"></div>
+    <header>
+        <h1 class="intro">Challenge Picker </h1>
+        <h2>Get your task</h2>
+    </header>
+
+    <section id="container">
+
+        <section class="random-task">
+            <div class="dice">
+                <div class="select-wrapper">
+                    <select id="list" onchange="getSelectValue();">
+                        <option value="" disabled selected hidden>Who are you?</option>
+                        <option value="Any">Any</option>
+                        <option value="Mandy">Mandy</option>
+                        <option value="Guest">Guest</option>
+                    </select>
+                </div>
+
+
+
+                <img id="dice-img" src="./assets/dice/dice1_2.png" alt="dice">
+
+                <!-- Board Countdown Start -->
+                <div class='board'>
+                    <a href="#" class="board-display">
+                        <span id="styles"></span>
+                    </a>
+                </div>
+                <!-- Board Countdown Start -->
+
+                <!-- button 3d start -->
+                <div class="btn-3D">
+                    <a href="#" class="btn-11">Roll the dice <i class="fas fa-dice"></i></a>
+                </div>
+                <!-- button 3d end -->
+                <!-- visual pointers to countdown start-->
+            </div>
+            <p id="result"></p>
+            <p class="arrow"><i class="fas fa-chevron-right"></i> Start the timer</p>
+            <span id="go"></span>
+            <!-- visual pointers to countdown end -->
+
+
+            <!-- Countdown Toggle start -->
+            <div>
+                <div class="countdown-timer">
+                    <p class="des-timer-1">break</p>
+                    <div class="header-timer">
+                        <p class="timer">timer</p>
+                        <input class="btn-alarm" type="checkbox">
+                    </div>
+                    <p class="des-timer-2">start</p>
+                </div>
+            </div>
+            <!-- Countdown Toggle end -->
+
+            <!-- Progress Bar start -->
+            <div class="time-tracker">
+                <div class="timer">
+                    <div class="bg">
+                    </div>
+                </div>
+                <div class="time">progress</div>
+            </div>
+            <!-- Progress Bar end -->
+
+
+
+
+
+            <!-- Audio  Start -->
+        </section>
+        <audio id='stream1'>
+            <source src="https://stream.radioparadise.com/aac-320">
+        </audio>
+        <audio id='stream2'>
+            <source src="https://stream.radioparadise.com/mellow-320">
+        </audio>
+        <audio id='stream3'>
+            <source src="https://stream.radioparadise.com/rock-320">
+        </audio>
+        <audio id='stream4'>
+            <source src="https://stream.radioparadise.com/world-etc-320">
+        </audio>
+            
+        <section>
+            <div class="player">
+                <i class="fa fa-fast-backward"></i>
+                <i id="play" class="fa fa-play"></i>
+                <i class="fa fa-fast-forward"></i>
+            </div>
+
+
+            <div class="title">Radio Paradise <span id=channel ></span>
+            </div>
+            <!-- Audio End -->
+        </section>
+            <footer>
+            </footer>
+        <script src="index.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
