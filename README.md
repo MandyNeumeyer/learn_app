@@ -12,7 +12,7 @@ This project was created together with [Any](https://github.com/itsAnyTime), whi
 
 [Live Demo](https://challenge-picker.netlify.app/#) 
 <img src="assets/learn-app.gif">
-<img src="https://media.giphy.com/media/vzC40E7x8ZiIMuJJur/giphy.gif">
+<img align=center src="https://media.giphy.com/media/vzC40E7x8ZiIMuJJur/giphy.gif">
 
 
 
