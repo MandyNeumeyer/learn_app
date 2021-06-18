@@ -54,34 +54,52 @@ color: #fdfdfdad;
     margin-top: 50px;
   }
   
-  /* auto size backgrounds in h1 */
-  h1::before,
-  h1::after {
-    content: "";
-    height: 100%;
-    display: block;
-    position: absolute;
-  }
   
-  /* background bar  */
-  h1::before {
-    background: #22222296;
-    /* set background before to width of website */
-    width: 145vh;
-    /* bring the red bar to middle of the page */
-    left: 50%;
-    /* move it 50% left to bring it to y = 0 */
-    transform: translateX(-50%);
-    z-index: -2;
-  }
-  
-h2 {
-    color: #fff;
-    font-size: 2rem;
-    font-family:  'Bungee', cursive;
-    text-shadow: 0px 6px 6px black;
+  h1 {
+    /* // text-transform: uppercase; */
+    line-height: 1.5;
+    color: #fdfdfdad;
+    /* // border-radius: 50%; */
+    }
+    
+    
+    .intro {
+        position: relative;
+        font-size: 4rem;
+        margin-top: 50px;
+      }
+      
+      /* auto size backgrounds in h1 */
+      h1::before,
+      h1::after {
+        content: "";
+        height: 100%;
+        display: block;
+        position: absolute;
+      }
+      
+      /* background bar  */
+      h1::before {
+        background: #22222296;
+        width: 100%;
+        /* set background before to width of website */
+        /* width: 145vh; */
+        /* bring the red bar to middle of the page */
+        /* left: 48%;
+        /* move it 50% left to bring it to y = 0 */
+        /* transform: translateX(-50%); */ 
+        z-index: -2;
+      }
+      
+    h2 {
+        color: #fff;
+        font-size: 2rem;
+        font-family:  'Bungee', cursive;
+        text-shadow: 0px 6px 6px black;
+    
+    }
+    
 
-}
 
   /* -------------- end header text */
 
@@ -159,7 +177,7 @@ h2 {
   font-size:22px;
   display: block;
   margin:3px;
-  background: #000000;
+  background: #2c2b2b;
   border-radius: 3px;
 }
 
@@ -188,20 +206,6 @@ h2 {
 /* dice button end */
 
 
-/* ------------ clock start ------------*/
-.clock{
-    color:#ffffff;  
-    margin: 1.5rem 1.5rem 0rem 0rem;
-    font-size:2rem;
-    text-align: end;
-    font-family: 'Ubuntu Condensed', cursive;
-    font-size: 1rem;
-    font-family:  'Bungee', cursive;
-    text-shadow: 0px 6px 6px black;
-} 
-
-/* ------------ clock end ---------------*/
-
 /* ------------ input field start -------*/
 .select-wrapper select{
     background: #403c3c;
@@ -210,6 +214,7 @@ h2 {
     max-width:250px;
     height:50px;
     border:none;
+    border-radius: px;
     outline: none;
     font-family:  'Bungee', cursive;
     font-size: 20px;
@@ -219,7 +224,10 @@ h2 {
 
 option
 {
-    color: #ffffff;
+    color: #fff;
+}
+option:hover {
+  color:cyan;
 }
 /* ------------ input field end -------*/
 
@@ -300,7 +308,6 @@ option
   section .time-tracker .timer .bg {
     position: relative;
     top: 50%;
-    margin-right: 0.5rem;
     transform: translateY(-50%);
     height: 0.6rem;
     border-top: solid 1px #000;
@@ -311,7 +318,7 @@ option
     box-sizing: border-box;
     text-align: left;
   }
-    section .time-tracker .timer .bg::before
+  section .time-tracker .timer .bg::before
     {
     content: "";
     top: 50%;
@@ -333,12 +340,13 @@ option
     color: cyan;
     text-shadow: 0 0 4px cyan;
   }
-
+  
 /* ----------------- music-player/ progress-bar end ----------*/
 
 
 
 /* ------------------checkbox for countdown start------------ */
+
 input[type="checkbox"] {
   margin-left:10px;
   position:relative;
@@ -405,7 +413,7 @@ input:checked[type="checkbox"]:after {
   display:flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 7px;
+  font-size: 14px;
 }
 
 
@@ -505,5 +513,41 @@ input:checked[type="checkbox"]:after {
   } 
 
   /* ------------------button 3d end----------------------------- */
+
+  /* -------------- footer start ---------*/
+
+.links {
+  color: rgb(82, 82, 82);
+} 
+
+/* mouse over link */
+.links:hover {
+  color:cyan;
+}
+
+
+
+ .footer {
+  text-align: end;
+  font-size: 1rem;
+  font-family: 'Bungee', cursive;
+  text-shadow: 0px 6px 6px black;
+  color: #fdfdfdad;
+} 
+
+/* ------------ clock start ------------*/
+ .clock{
+    color: #fdfdfdad; 
+    font-size:2rem;
+    text-align: end;
+    font-family: 'Ubuntu Condensed', cursive;
+    font-size: 1rem;
+    font-family:  'Bungee', cursive;
+    text-shadow: 0px 6px 6px black;
+}  
+
+/* ------------ clock end ---------------*/
+
+/* ----------------- end ----------*/
 
  
