@@ -1,5 +1,10 @@
 ## Coding Challenge Picker
 
+* roll the dice to get a coding challenge and time  
+* start / pause countdown
+* progress-bar 
+* audio stream
+
 This project was created together with [Any](https://github.com/itsAnyTime), while on a web development course @ the Digital Career Institute. The purpose of this project was to practice collaborating via GitHub Projects.
 
 **Build with:**  
