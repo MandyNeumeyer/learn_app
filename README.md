@@ -11,10 +11,9 @@ This project was created together with [Any](https://github.com/itsAnyTime), whi
 
 
 [Live Demo](https://challenge-picker.netlify.app/#) 
-<img src="assets/learn-app.gif">
-<div align=center>
-<img src="https://media.giphy.com/media/vzC40E7x8ZiIMuJJur/giphy.gif">
-</div>
+<img src="assets/learnapp.gif">
+<div align="center"><img src="https://media.giphy.com/media/vzC40E7x8ZiIMuJJur/giphy.gif" width="40%"><img src="assets/learnapp-phone1.png" width="20%"><img src="assets/learnapp-phone2.png" width="20%"></div>
+
 
 
 
